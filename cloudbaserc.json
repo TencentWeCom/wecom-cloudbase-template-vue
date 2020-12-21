@@ -101,10 +101,6 @@
     },
     "requirement": {
       "environment": {
-        "ENV_ID": {
-          "description": "云开发环境 ID",
-          "required": true
-        },
         "WECOM_PROVIDER_ID": {
           "description": "服务商企业 ID",
           "required": true
