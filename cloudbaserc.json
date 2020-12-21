@@ -1,0 +1,156 @@
+{
+  "$schema": "https://framework-1258016615.tcloudbaseapp.com/schema/latest.json",
+  "version": "2.0",
+  "envId": "{{env.ENV_ID}}",
+  "framework": {
+    "name": "WecomService",
+    "plugins": {
+      "functions": {
+        "use": "@cloudbase/framework-plugin-function",
+        "inputs": {
+          "functionRootPath": "functions",
+          "functions": [
+            {
+              "name": "get-jsapi-signature",
+              "envVariables": {
+                "WECOM_SUITE_ID": "{{env.WECOM_SUITE_ID}}"
+              }
+            },
+            {
+              "name": "get-user-info",
+              "envVariables": {
+                "WECOM_SUITE_ID": "{{env.WECOM_SUITE_ID}}"
+              }
+            },
+            {
+              "name": "login-with-qrcode-oauth",
+              "envVariables": {
+                "ENV_ID": "{{env.ENV_ID}}",
+                "WECOM_SUITE_ID": "{{env.WECOM_SUITE_ID}}",
+                "WECOM_CUSTOM_LOGIN_PRIVATE_KEY_ID": "{{env.WECOM_CUSTOM_LOGIN_PRIVATE_KEY_ID}}",
+                "WECOM_CUSTOM_LOGIN_PRIVATE_KEY": "{{env.WECOM_CUSTOM_LOGIN_PRIVATE_KEY}}"
+              }
+            },
+            {
+              "name": "login-with-redirect-oauth",
+              "envVariables": {
+                "ENV_ID": "{{env.ENV_ID}}",
+                "WECOM_SUITE_ID": "{{env.WECOM_SUITE_ID}}",
+                "WECOM_CUSTOM_LOGIN_PRIVATE_KEY_ID": "{{env.WECOM_CUSTOM_LOGIN_PRIVATE_KEY_ID}}",
+                "WECOM_CUSTOM_LOGIN_PRIVATE_KEY": "{{env.WECOM_CUSTOM_LOGIN_PRIVATE_KEY}}"
+              }
+            }
+          ]
+        }
+      },
+      "client": {
+        "use": "@cloudbase/framework-plugin-website",
+        "inputs": {
+          "installCommand": "yarn",
+          "buildCommand": "npm run build:client",
+          "outputPath": "client/dist",
+          "cloudPath": "/",
+          "envVariables": {
+            "ENV_ID": "{{env.ENV_ID}}",
+            "PROVIDER_ID": "{{env.WECOM_PROVIDER_ID}}",
+            "SUITE_ID": "{{env.WECOM_SUITE_ID}}"
+          }
+        }
+      },
+      "database": {
+        "use": "@cloudbase/framework-plugin-database",
+        "inputs": {
+          "collections": [
+            {
+              "collectionName": "my-user",
+              "description": "用户信息",
+              "createIndexes": [
+                {
+                  "name": "primary_key",
+                  "unique": true,
+                  "keys": [
+                    {
+                      "name": "open_userid",
+                      "direction": "1"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "wecom": {
+        "use": "@wecom/cloudbase-framework-plugin@0.3.1",
+        "inputs": {
+          "providerId": "{{env.WECOM_PROVIDER_ID}}",
+          "providerSecret": "{{env.WECOM_PROVIDER_SECRET}}",
+          "token": "{{env.WECOM_TOKEN}}",
+          "encodingAESKey": "{{env.WECOM_ENCODING_AES_KEY}}",
+          "suiteList": [
+            {
+              "suiteId": "{{env.WECOM_SUITE_ID}}",
+              "suiteSecret": "{{env.WECOM_SUITE_SECRET}}"
+            }
+          ],
+          "callbackEntry": "{{env.WECOM_CALLBACK_ENTRY}}",
+          "customCallbackFunction": "{{env.WECOM_CUSTOM_CALLBACK_FUNCTION}}",
+          "debug": "{{env.WECOM_DEBUG}}"
+        }
+      }
+    },
+    "requirement": {
+      "environment": {
+        "ENV_ID": {
+          "description": "云开发环境 ID",
+          "required": true
+        },
+        "WECOM_PROVIDER_ID": {
+          "description": "服务商企业 ID",
+          "required": true
+        },
+        "WECOM_PROVIDER_SECRET": {
+          "description": "服务商 ProviderSecret",
+          "required": true
+        },
+        "WECOM_TOKEN": {
+          "description": "加解密 Token",
+          "required": true
+        },
+        "WECOM_ENCODING_AES_KEY": {
+          "description": "加解密 EncodingAESKey",
+          "required": true
+        },
+        "WECOM_SUITE_ID": {
+          "description": "第三方应用 ID",
+          "required": true
+        },
+        "WECOM_SUITE_SECRET": {
+          "description": "第三方应用 secret",
+          "required": true
+        },
+        "WECOM_CUSTOM_LOGIN_PRIVATE_KEY_ID": {
+          "description": "自定义登录私钥 ID",
+          "required": true
+        },
+        "WECOM_CUSTOM_LOGIN_PRIVATE_KEY": {
+          "description": "自定义登录私钥",
+          "required": true
+        },
+        "WECOM_CALLBACK_ENTRY": {
+          "description": "回调 URL 路径",
+          "required": false,
+          "default": "/ww-callback"
+        },
+        "WECOM_CUSTOM_CALLBACK_FUNCTION": {
+          "description": "自定义回调云函数名称",
+          "required": false
+        },
+        "WECOM_DEBUG": {
+          "description": "开启调试日志",
+          "required": false
+        }
+      }
+    }
+  }
+}
