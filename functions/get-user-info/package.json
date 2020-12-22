@@ -5,6 +5,6 @@
   "main": "index.js",
   "dependencies": {
     "@cloudbase/node-sdk": "^2.4.6",
-    "@wecom/cloudbase-framework-plugin-node-sdk": "^0.3.1"
+    "@wecom/cloudbase-framework-plugin-node-sdk": "^0.3.2"
   }
 }

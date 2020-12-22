@@ -1843,26 +1843,26 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
-"@wecom/cloudbase-framework-plugin-actions@0.3.1":
-  version "0.3.1"
-  resolved "https://registry.npmjs.org/@wecom/cloudbase-framework-plugin-actions/-/cloudbase-framework-plugin-actions-0.3.1.tgz#e90ce00771c76388b95a82af5c1bc29320311535"
-  integrity sha512-cLF8L4jSOQ7L/nJCQBRzAJ0TqbKSv3vfZSv5GZ9ecTFY5XAFU4L59Lo5KFbkntbsD+3o/P7tS51FucGWkWhKVA==
+"@wecom/cloudbase-framework-plugin-actions@0.3.2":
+  version "0.3.2"
+  resolved "http://mirrors.tencent.com/npm/@wecom%2fcloudbase-framework-plugin-actions/-/cloudbase-framework-plugin-actions-0.3.2.tgz#4215b3b8781162349868b7f91d801348c55603c4"
+  integrity sha512-3ZGcH1UglL6cfypoqGAUvzmLYNg67m5sJDDBseoLq2OvQJjVWGwRyrREnnKn9BnGZHwv1+UDTmr2+wZz130Qow==
   dependencies:
-    "@wecom/cloudbase-framework-plugin-util" "0.3.1"
+    "@wecom/cloudbase-framework-plugin-util" "0.3.2"
     node-fetch "^2.6.1"
 
-"@wecom/cloudbase-framework-plugin-node-sdk@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.npmjs.org/@wecom/cloudbase-framework-plugin-node-sdk/-/cloudbase-framework-plugin-node-sdk-0.3.1.tgz#e73db5fda9df6a7a6b2ce5c73daf6bb4efbef8dd"
-  integrity sha512-43VS68ZEoJMJAu1jfDymcuAiGolcYOJgAon7iKX2oOckNA5YUGmgoNnKiDC9jM1ecN3HD4SL7mtNiPkxh0iQ7Q==
+"@wecom/cloudbase-framework-plugin-node-sdk@^0.3.2":
+  version "0.3.2"
+  resolved "http://mirrors.tencent.com/npm/@wecom%2fcloudbase-framework-plugin-node-sdk/-/cloudbase-framework-plugin-node-sdk-0.3.2.tgz#b65f83b9b7c4688458cf160dbe38052c8b6adcca"
+  integrity sha512-BzM15l02h6K1Wmr3izTrW5e69XQT55yE6mKgRy27FTd01GNjkTsjPmxfrEBSEGavyJaiaCJ4M1/S1JxnE8oP9A==
   dependencies:
-    "@wecom/cloudbase-framework-plugin-actions" "0.3.1"
-    "@wecom/cloudbase-framework-plugin-util" "0.3.1"
+    "@wecom/cloudbase-framework-plugin-actions" "0.3.2"
+    "@wecom/cloudbase-framework-plugin-util" "0.3.2"
 
-"@wecom/cloudbase-framework-plugin-util@0.3.1":
-  version "0.3.1"
-  resolved "https://registry.npmjs.org/@wecom/cloudbase-framework-plugin-util/-/cloudbase-framework-plugin-util-0.3.1.tgz#295dc3abc67eb6678a529ef20a444fa65ea8495a"
-  integrity sha512-ipQO1cEmL1HSdVI4KT/XYD0GaVoq/wz9PzOciPig6azEj8X51eCkSmTxOyHEM1vP6JzzonjOd+BW1oh5AiDEog==
+"@wecom/cloudbase-framework-plugin-util@0.3.2":
+  version "0.3.2"
+  resolved "http://mirrors.tencent.com/npm/@wecom%2fcloudbase-framework-plugin-util/-/cloudbase-framework-plugin-util-0.3.2.tgz#586de93187171689aa2afd319e1061a2c5a7690a"
+  integrity sha512-46TbAerZVqjq4LmHa03483QGdsM/LTYhczH/wtwgRbzvbeYakKOWbvW/0qaOViG9Fs24UEFWE+k5OJ6WbMIhEQ==
   dependencies:
     "@cloudbase/node-sdk" "^2.4.7"
 
