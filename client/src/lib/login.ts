@@ -1,7 +1,7 @@
 import * as qs from 'querystring';
 
 import { useAuth } from './cloudbase';
-import { isMobile, useEnv } from './env';
+import { isWechat, useEnv } from './env';
 import { useTCB } from './tcb';
 
 export function useLogin() {
@@ -59,7 +59,7 @@ export function useLogin() {
    * 重定向到登录 URL
    */
   function redirectOAuth() {
-    if (!isMobile) {
+    if (!isWechat) {
       const params = qs.stringify({
         appid: env.PROVIDER_ID,
         redirect_uri: location.href,
