@@ -10,11 +10,11 @@ __注意：该项目处于开发调试阶段，请勿在线上环境中使用__
 
 ### 1. 创建云开发环境
 
-点击 [这里](https://console.cloud.tencent.com/tcb/env/index?rid=4&action=CreateEnv) 创建一个「按量计费」的云开发环境，在环境创建完成后：
+点击 [这里](https://console.cloud.tencent.com/tcb/env/index?action=CreateEnv) 创建一个「按量计费」的云开发环境，在环境创建完成后：
 
-- 在「静态网站托管」记录下默认域名，作为应用的「静态域名」
-- 在「环境 / HTTP访问服务」记录下默认域名，作为应用的「服务域名」
-- 在「环境 / 登录授权」下载自定义登录私钥，取出其中的 private_key_id 和 private_key
+- 在「[静态网站托管](https://console.cloud.tencent.com/tcb/hosting)」记录下默认域名，作为应用的「静态域名」
+- 在「[环境 / HTTP访问服务](https://console.cloud.tencent.com/tcb/env/access)」记录下默认域名，作为应用的「服务域名」
+- 在「[环境 / 登录授权](https://console.cloud.tencent.com/tcb/env/login)」下载自定义登录私钥，取出其中的 private_key_id 和 private_key
 
 ### 2. 创建网页应用
 
@@ -41,14 +41,14 @@ __注意：该项目处于开发调试阶段，请勿在线上环境中使用__
 
 ### 4. 配置云函数
 
-进入「云函数」页面，在 ww-action、ww-callback 两个云函数的编辑页面中勾选「固定出口 IP」，保存成功后在函数配置页记录下「公网固定 IP」。
+进入「[云函数](https://console.cloud.tencent.com/tcb/scf/index)」页面，在 ww-action、ww-callback 两个云函数的编辑页面中勾选「固定出口 IP」，保存成功后在函数配置页记录下「公网固定 IP」。
 
 ### 5. 配置第三方应用
 
 - 在「[服务商后台 / 服务商信息](https://open.work.weixin.qq.com/wwopen/developer#/profile/basic)」的「IP白名单」中填入上一步获取的「公网固定 IP」
 - 在「[服务商后台 / 应用管理 / 登录授权](https://open.work.weixin.qq.com/wwopen/developer#/sass/power/login)」的「登录授权发起域名」和「授权完成回调域名」中填入步骤 1 中获取的「静态域名」
 - 在应用详情页面：
-	- 编辑「使用配置」，点击「校验可信域名归属」，下载校验文件，把文件上传到「云开发控制台 / 静态网站托管」的根目录
+	- 编辑「使用配置」，点击「校验可信域名归属」，下载校验文件，把文件上传到「[云开发控制台 / 静态网站托管](https://console.cloud.tencent.com/tcb/hosting)」的根目录
 	- 编辑「回调配置」，点击「数据回调URL」和「指令回调URL」的「申请校验」链接
 	- 回调 URL 校验完成后，点击应用详情页面的「刷新 Ticket」按钮
 
