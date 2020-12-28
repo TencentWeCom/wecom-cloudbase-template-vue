@@ -3,10 +3,10 @@ import VConsole from 'vconsole';
 
 import App from './App.vue';
 import cloudbase from './lib/cloudbase';
-import { isMobile, provideEnv } from './lib/env';
+import { isWechat, provideEnv } from './lib/env';
 
 // FIXME: remove in production environment
-if (isMobile) {
+if (isWechat) {
   new VConsole();
 }
 
