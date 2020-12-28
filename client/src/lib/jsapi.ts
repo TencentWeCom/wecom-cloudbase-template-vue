@@ -16,7 +16,7 @@ export function useJSAPI() {
 
       return originalInvoke.call(this, type, params, function (this: any, res: any) {
         console.log('<-', type, `[${Date.now() - startTime}ms]`, res);
-        return callback.call(this, res);
+        return callback?.call(this, res);
       });
     };
   }
