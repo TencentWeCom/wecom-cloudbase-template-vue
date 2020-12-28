@@ -1866,10 +1866,10 @@
   dependencies:
     "@cloudbase/node-sdk" "^2.4.7"
 
-"@wecom/jssdk@^1.1.4":
-  version "1.1.4"
-  resolved "https://registry.npmjs.org/@wecom/jssdk/-/jssdk-1.1.4.tgz#5d8a270bc3a093f1d6bb37b05df008a7dcff7c6d"
-  integrity sha512-DFvjwdawWSpDSOUr+wTZF/FA24KrmX5G1TI9BcfCr3biGdZKuDL5CIqzGGTMqqmWCAO0+odV9Y4Uuj0bzcHNhg==
+"@wecom/jssdk@^1.1.9":
+  version "1.1.9"
+  resolved "https://registry.npmjs.org/@wecom/jssdk/-/jssdk-1.1.9.tgz#bcb1db17480d2387a2612beba29e2e0e08cfe595"
+  integrity sha512-MUr7pEH4a8Cjyb23GwDrKqGGDICmHSXxYBEIjgA5vrd3TKBqUVi6NPmja77an04515IOWyRjFqrxXASZABkIaA==
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"

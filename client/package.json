@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@cloudbase/js-sdk": "^1.3.3",
-    "@wecom/jssdk": "^1.1.4",
+    "@wecom/jssdk": "^1.1.9",
     "vconsole": "^3.3.4",
     "vue": "^3.0.0"
   },
