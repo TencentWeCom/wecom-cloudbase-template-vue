@@ -18,13 +18,18 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent, onMounted, nextTick } from 'vue';
+import {
+  ref,
+  defineComponent,
+  onMounted,
+  nextTick,
+} from 'vue';
+
 import * as ww from '@wecom/jssdk';
 
 import { isWechat } from './lib/env';
 import { useLogin } from './lib/login';
 import { useJSAPI } from './lib/jsapi';
-import { useAuth, useCloudBase } from './lib/cloudbase';
 
 export default defineComponent({
 

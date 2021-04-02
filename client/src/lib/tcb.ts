@@ -1,9 +1,9 @@
 import { useCloudBase } from './cloudbase';
 
 export function useTCB() {
-  const app = useCloudBase()!
+  const app = useCloudBase()!;
 
-  async function call(name: string, data: any) {
+  async function call(name: string, data?: any) {
     const startTime = Date.now();
     console.log('=>', name, data);
 

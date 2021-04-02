@@ -37,11 +37,11 @@ __注意：该项目处于开发调试阶段，请勿在线上环境中使用__
 - 服务商 CorpID、ProviderSecret 在「[服务商后台 / 应用管理 / 通用开发参数](https://open.work.weixin.qq.com/wwopen/developer#/sass/power/inter)」页面获取
 - Token、EncodingAESKey 填创建应用时填入的 Token、EncodingAESKey，可在应用详情页面查看
 - Suite ID、Suite Secret 可在应用详情页面获取
-- 自定义登录私钥填入步骤 1 中获取的私钥信息，注意需要把 private_key 中的 `\n` 替换成 `\\n`
+- 自定义登录私钥填入步骤 1 中获取的私钥信息
 
 ### 4. 配置云函数
 
-进入「[云函数](https://console.cloud.tencent.com/tcb/scf/index)」页面，在 ww-action、ww-callback 两个云函数的编辑页面中勾选「固定出口 IP」，保存成功后在函数配置页记录下「公网固定 IP」。
+进入「[云函数](https://console.cloud.tencent.com/tcb/scf/index)」页面，在 ww-action、ww-callback 两个云函数的函数配置页面中记录下「公网固定 IP」。
 
 ### 5. 配置第三方应用
 

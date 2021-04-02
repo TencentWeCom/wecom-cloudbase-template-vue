@@ -3,21 +3,14 @@ import VConsole from 'vconsole';
 
 import App from './App.vue';
 import cloudbase from './lib/cloudbase';
-import { isWechat, provideEnv } from './lib/env';
+import { isWechat, provideEnv, tcbEnv } from './lib/env';
 
 // FIXME: remove in production environment
 if (isWechat) {
   new VConsole();
 }
 
-init().catch(console.error);
-
-async function init() {
-  const env = await fetch('/cloudbaseenv.json')
-    .then(res => res.json());
-
-  createApp(App)
-    .use(provideEnv(env))
-    .use(cloudbase({ env: env.ENV_ID }, { persistence: 'local' }))
-    .mount('#app');
-}
+createApp(App)
+  .use(provideEnv(tcbEnv))
+  .use(cloudbase({ env: tcbEnv.ENV_ID }, { persistence: 'local' }))
+  .mount('#app');

@@ -63,7 +63,6 @@
           "outputPath": "client/dist",
           "cloudPath": "/",
           "envVariables": {
-            "ENV_ID": "{{env.ENV_ID}}",
             "PROVIDER_ID": "{{env.WECOM_PROVIDER_ID}}",
             "SUITE_ID": "{{env.WECOM_SUITE_ID}}"
           }
@@ -104,7 +103,7 @@
         }
       },
       "wecom": {
-        "use": "@wecom/cloudbase-framework-plugin@0.3.2",
+        "use": "@wecom/cloudbase-framework-plugin@0.3.4",
         "inputs": {
           "providerId": "{{env.WECOM_PROVIDER_ID}}",
           "providerSecret": "{{env.WECOM_PROVIDER_SECRET}}",

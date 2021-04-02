@@ -1,7 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-const { parse } = require('envfile');
-
 module.exports = {
   chainWebpack: (config) => {
     config.module
@@ -11,9 +7,12 @@ module.exports = {
         // eslint-disable-next-line no-param-reassign
         options.compilerOptions = {
           ...(options.compilerOptions || {}),
-          isCustomElement: tag => ['ww-open-data'].includes(tag),
+          isCustomElement: (tag) => ['ww-open-data'].includes(tag),
         };
         return options;
       });
+  },
+  devServer: {
+    proxy: 'https://wwservicedemo-4g35adwod8b7532f-1253481040.tcloudbaseapp.com/',
   },
 };

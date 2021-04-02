@@ -9,6 +9,9 @@ export function useLogin() {
   const tcb = useTCB();
   const env = useEnv()!;
 
+  /**
+   * 检查用户登录态
+   */
   async function checkLogin() {
     const loginUserInfo = await getLoginUserInfo();
     if (loginUserInfo) {
@@ -46,9 +49,7 @@ export function useLogin() {
     }
 
     try {
-      return await tcb.call('get-user-info', {
-        customUserId: loginState.user.customUserId,
-      });
+      return await tcb.call('get-user-info');
     } catch (error) {
       console.error('Get user info failed', error);
       await auth.signOut();
